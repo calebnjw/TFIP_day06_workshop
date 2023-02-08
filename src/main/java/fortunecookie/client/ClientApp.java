@@ -1,4 +1,4 @@
-package fortunecookie.client;
+package main.java.fortuneCookie.client;
 
 public class ClientApp {
 

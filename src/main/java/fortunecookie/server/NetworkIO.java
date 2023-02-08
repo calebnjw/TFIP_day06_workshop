@@ -1,4 +1,4 @@
-package fortunecookie.server;
+package main.java.fortuneCookie.server;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
