@@ -11,6 +11,20 @@ public class Cookie {
     String randomCookie = "";
     String output = "";
 
+    // get cookies using other method
+    List<String> cookies = getCookiesFromFile(path);
+
+    // get random cookie from list using Random
+    Random random = new Random();
+    int position = random.nextInt(cookies.size());
+    randomCookie = cookies.get(position);
+
+    output = randomCookie;
+
+    return output;
+  }
+
+  public static List<String> getCookiesFromFile(String path) {
     // instantiate file using the fully qualified path
     File cookieFile = new File(path);
 
@@ -27,19 +41,10 @@ public class Cookie {
       }
       scanner.close();
 
-      // get random cookie from list using Random
-      Random random = new Random();
-      int position = random.nextInt(cookies.size());
-      randomCookie = cookies.get(position);
-      System.out.println("Cookie selected: " + randomCookie);
-      System.out.println("Random position: " + position);
-
-      output = randomCookie + ";" + position;
-
     } catch (Exception e) {
       e.printStackTrace();
     }
 
-    return output;
+    return cookies;
   }
 }
