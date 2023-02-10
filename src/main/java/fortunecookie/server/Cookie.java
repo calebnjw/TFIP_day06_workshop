@@ -1,4 +1,4 @@
-package main.java.fortuneCookie.server;
+package fortuneCookie.server;
 
 import java.io.File;
 import java.util.LinkedList;
